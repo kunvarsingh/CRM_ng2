@@ -1,0 +1,173 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</div>
+</nav>
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-12" style="margin: 0px; padding: 0px;">
+      <div class="top" style="background: #eee; padding: 1em;">
+        <span>
+            One of three columns
+        </span>
+      </div>
+    </div>
+  </div>
+
+<!-- <div id="div1" class="container" (drop)="drop($event)" (dragover)="allowDrop($event)">
+<img id="drag1" src="http://www.w3schools.com/html/img_w3slogo.gif" draggable="true"
+  (dragstart)="drag($event)" width="336" height="69">
+</div> -->
+
+<!-- <div id="div2" class="container" (drop)="drop($event)" (dragover)="allowDrop($event)">Hello</div> -->
+<input type="file" id="file" style="display: none" /> 
+
+  <div class="row">
+
+      <div class="col-md-2" style="padding: 0px;">
+        <div class="left" style="background: #f7f7f7; padding: 1em;">
+         <div class="row">
+
+           <div class="col-md-6 text-center" id="draggable" (dragstart)="drag($event,'button')">
+             <img style="width: 50px;" src="assets/image/form.svg" alt="">
+             <span style="display: block; font-size: 12px;">Button</span>
+           </div>
+
+           <div class="col-md-6 text-center" id="draggable" (dragstart)="drag($event,'input')">
+             <img style="width: 50px;" src="assets/image/form.svg" alt="">
+             <span style="display: block; font-size: 12px;">Text Input</span>
+           </div>
+
+            <div class="col-md-6 text-center" id="draggable" (dragstart)="drag($event,'image')">
+             <img style="width: 50px;" src="assets/image/form.svg" alt="">
+             <span style="display: block; font-size: 12px;">Image</span>
+           </div>
+
+           <div class="col-md-6" id="draggable" (dragstart)="drag($event,'textArea')" >
+              <img style="width: 40px; text-align: center;" src="assets/image/text_area.svg" alt="">
+              <span style="display: block; font-size: 12px;">Text Area</span>
+           </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+          <div class="content">
+           <div class="row">
+
+              <div class="col-md-12" id="newArea"(drop)="drop($event)" (dragover)="allowDrop($event)">
+               
+                <table style="width: 100%; max-width: 600px; background: #fff; margin: 0px auto; padding: 10px;">
+                    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Poiret+One" rel="stylesheet">
+                  <tr>
+                    <td>
+                      <table style="width: 100%; max-width: 500px; margin: 0px auto; padding: 50px 0px;">
+                        <tr>
+                          <td>
+                            <img style="width: 80px; display: block; margin-right: auto; margin-left: auto; margin-bottom: 15px; " src="https://image.flaticon.com/icons/svg/865/865140.svg">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <h1 style="text-align: center; font-size: 35px; color: #615f5e; margin-bottom: 10px; font-family: 'Poiret One', cursive;">WELCOME!</h1>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><p style="background: #f8bd1c;width: 30px; height: 3px; margin: 0px auto;">&nbsp;</p></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p style="font-family: sans-serif;"><b>Hi Dihsar,</b></p>
+                            <p style="color: #615f5e; line-height: 22px;">You have successfully created your Kid & Coe account with the following email address: <a style="color: #0098b9;" href="#">blockon.tech@gmail.com</a> In order to access all areas of the site you must activate your account by clicking <a style="color: #0098b9;" href="#">here</a></p>
+                            <p style="color: #615f5e; line-height: 22px;">If you have any questions or comments just email <a style="color: #0098b9; " href="#">team@kidandcoe.com</a>. We would love to hear from you!</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span style="display: block; color: #615f5e;">Cheers,</span>
+                            <span style="font-size: 14px; font-family: sans-serif;">The Kid & Coe Team</span>
+                            <p style="background: #f3f3f3;"></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><p style="background-color: lightgray; width: 100%; height: 1px; margin: 0px;">&nbsp;</p></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table style="width: 150px; margin: 0px auto; margin-top: 30px; margin-bottom: 10px;">
+                              <tr>
+                                <td><img style="width: 30px;" src="https://image.flaticon.com/icons/svg/145/145802.svg"></td>
+                                <td><img style="width: 30px;" src="https://image.flaticon.com/icons/svg/185/185964.svg"></td>
+                                <td><img style="width: 30px;" src="https://image.flaticon.com/icons/svg/145/145804.svg"></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: center; font-family: sans-serif; font-size: 12px;">Kid & Coe</td>
+                        </tr>
+                        <tr>
+                          <td  style="text-align: center; font-family: sans-serif; font-size: 12px;">
+                            41 East 11th Street Suite 99</td>
+                        </tr>
+                        <tr>
+                          <td  style="text-align: center; font-family: sans-serif; font-size: 12px;">New York, NY 10003</td>
+                        </tr>
+
+
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+           </div>
+          </div>
+      </div>
+
+      <div class="col-md-2" style="padding: 0px;">
+          <div class="right" style="background: #f7f7f7; padding: 1em;">
+            <span>
+                One of three columns
+            </span>
+          </div>
+      </div>
+
+  </div>
+  <input type="button" name="download" value="download" (click)="download()"/>
+
+</div>

@@ -1,0 +1,30 @@
+.content{
+  background: lightcyan;
+  padding: 1em;
+}
+
+#draggable {
+  width: 100px;
+  height: 100px;
+  background: #ccc;
+  padding: 10px;
+}
+#droppable {
+  position: absolute;
+  left: ;
+  top: ;
+  width: 125px;
+  height: 125px;
+  background: #999;
+  color: #fff;
+  padding: 10px;
+  border: 4px solid #999;
+}
+.active {
+  border: 4px solid #F00 !important;
+}
+.droppable{
+  width: 100%;
+  height: 150px;
+  background: lightgreen;
+}
