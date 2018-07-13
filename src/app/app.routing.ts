@@ -1,16 +1,16 @@
 import { ModuleWithProviders} from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules} from '@angular/router';
-import { DotsComponent } from './dots/dots.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
 
 export const AppRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'dots',
+    redirectTo: 'dashboard',
     pathMatch: 'full',
   },
   {
-    path: 'dots',
-    component: DotsComponent
+    path: 'dashboard',
+    component: DashboardComponent
   }
 ];
 export const routing: ModuleWithProviders = RouterModule.forRoot(AppRoutes, {preloadingStrategy: PreloadAllModules });

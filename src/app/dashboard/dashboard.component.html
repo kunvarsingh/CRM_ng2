@@ -1,0 +1,150 @@
+<!-- <div [froalaEditor]>Hello, Froala!</div> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</div>
+</nav>
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-12" style="margin: 0px; padding: 0px;">
+      <div class="top" style="background: #eee; padding: 1em;">
+        <span>
+            One of three columns
+        </span>
+      </div>
+    </div>
+  </div>
+
+<!-- <div id="div1" class="container" (drop)="drop($event)" (dragover)="allowDrop($event)">
+<img id="drag1" src="http://www.w3schools.com/html/img_w3slogo.gif" draggable="true"
+  (dragstart)="drag($event)" width="336" height="69">
+</div> -->
+
+<!-- <div id="div2" class="container" (drop)="drop($event)" (dragover)="allowDrop($event)">Hello</div> -->
+
+<input type="file" id="file" style="display: none" /> 
+
+  <div class="row">
+
+      <div class="col-md-2" style="padding: 0px;">
+        <div class="left" style="background: #f7f7f7; padding: 1em;">
+         <div class="row">
+
+           <div class="col-md-6 text-center" id="draggable" (dragstart)="drag($event,'button')">
+             <img style="width: 50px;" src="assets/image/form.svg" alt="">
+             <span style="display: block; font-size: 12px;">Button</span>
+           </div>
+
+           <div class="col-md-6 text-center" id="draggable" (dragstart)="drag($event,'input')">
+             <img style="width: 50px;" src="assets/image/form.svg" alt="">
+             <span style="display: block; font-size: 12px;">Text Input</span>
+           </div>
+
+            <div class="col-md-6 text-center" id="draggable" (dragstart)="drag($event,'image')">
+             <img style="width: 50px;" src="assets/image/form.svg" alt="">
+             <span style="display: block; font-size: 12px;">Image</span>
+           </div>
+
+           <div class="col-md-6 text-center" id="draggable" (dragstart)="drag($event,'textArea')" >
+              <img style="width: 40px; text-align: center;" src="assets/image/text_area.svg" alt="">
+              <span style="display: block; font-size: 12px;">Text Area</span>
+           </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+          <div class="content">
+           <div class="row">
+
+              <div class="col-md-12" id="newArea"(drop)="drop($event)" (dragover)="allowDrop($event)" style="height:500px">
+              
+                   
+              </div>
+           </div>
+          </div>
+      </div>
+
+      <div class="col-md-2" style="padding: 0px;">
+          <div class="right" style="background: #f7f7f7; padding: 1em;">
+            <span>
+                One of three columns
+            </span>
+          </div>
+
+          <div class="right" style="background: #f7f7f7; padding: 1em;" *ngIf="buttonPanelSettings">
+            <span>
+                Button Settings
+            </span>
+            
+            <div>
+              <input type="text" [(ngModel)]="name" name="name" placeholder="button name">
+              Height : <input type="text" [(ngModel)]="height" name="height" placeholder="0px">
+              Width : <input type="text" [(ngModel)]="width" name="width" placeholder="0px">
+              <input type="button" (click)="saveButtonProperty()" name="Save" value="Save">
+            </div>
+          </div>
+
+          <div class="right" style="background: #f7f7f7; padding: 1em;" *ngIf="textBoxPanelSettings">
+            <span>
+                TextBox and TextArea Settings
+            </span>
+            
+            <div>
+              Height : <input type="text" [(ngModel)]="height" name="height" placeholder="0px">
+              Width : <input type="text" [(ngModel)]="width" name="width" placeholder="0px">
+              Font Size :
+              <select [(ngModel)]="fontsize">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+
+              <input type="button" (click)="saveTextboxProperty()" name="Save" value="Save">
+            </div>
+          </div>
+
+
+      </div>
+
+  </div>
+  <input type="button" name="download" value="download" (click)="download()"/>
+
+</div>
